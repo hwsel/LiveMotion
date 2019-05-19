@@ -34,6 +34,6 @@ LiveMotion
 
 ## Experiment Setup
 
-This work is built with Opencv3.3 (C++) + Visualstudio 17 on Windows 10. Please first download and install the Visualstudio 17 for the C++ debugging environment. Then, download and intall the Opencv 3.3 (https://docs.opencv.org/3.3.0/d3/d52/tutorial_windows_install.html)
+This work is built with Opencv3.3 (C++) + Visualstudio 17 on Windows 10. Please first download and install the Visualstudio 17 for the C++ debugging environment. Then, download and intall the [Opencv 3.3] (https://docs.opencv.org/3.3.0/d3/d52/tutorial_windows_install.html)
 
 ##
