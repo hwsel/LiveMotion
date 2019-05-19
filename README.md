@@ -5,18 +5,30 @@ This is the source code for our paper: "Viewport Prediction for Live 360-Degree 
 ## hierarchy of this reporsitory:
 
 LiveMotion
+
     |
+
     |--------Paper 
+
     |          |-------"Viewport Prediction for Live 360-Degree Mobile Video Streaming Using User-Content Hybrid Motion Tracking.pdf"
+
     |        our paper for this project.
+    
     |
+    
     |--------source code
+    
     |           |-----"main_RU.cpp"          Testing the algorithm on the public dataset
+    
     |           |-----"main_unl.cpp"         Testing the algorithm on our private dataset
+    
     |       the source code for this paper.
+    
     |
     |---------testData
+    
                 |-------Private 4 user   Contains our private dataset
+    
                 |-------Publicdataset    Contains the public dataset
 
 
