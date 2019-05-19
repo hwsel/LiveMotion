@@ -29,7 +29,6 @@ LiveMotion
     
                 |-------Private 4 user   Contains our private dataset
     
-                |-------Publicdataset    Contains the public dataset
 
 
 ## Experiment Setup
@@ -51,3 +50,4 @@ The source code will store the running information (accuracy & bandwidth usage) 
 The link for the public datset is shown below:
 (https://wuchlei-thu.github.io/) 
 where you can find more detailed information.
+Please cite the paper and aknowledge their work if you plan to use their work.
