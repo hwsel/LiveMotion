@@ -1,4 +1,4 @@
-This is the source code for our paper: "Viewport Prediction for Live 360-Degree Mobile Video Streaming Using User-Content Hybrid Motion Tracking". This paper is going to be published in IWMUT. Please direct your questions and comments to hwselunl@gmail.com.
+This is the source code for our paper: "Viewport Prediction for Live 360-Degree Mobile Video Streaming Using User-Content Hybrid Motion Tracking". This paper is going to be published in IWMUT Jun 2019 (Vol. 3, No. 2, Article 43). Please direct your questions and comments to hwselunl@gmail.com.
 
 # LiveMotion
 
