@@ -1,4 +1,6 @@
-This is the project repository for our Ubicomp'19 paper: 
+# LiveMotion
+
+This is the project repository for our LiveMotion paper published in Ubicomp'19: 
 
 Xianglong Feng, Viswanathan Swaminathan, Sheng Wei, Viewport Prediction for Live 360-Degree Mobile Video Streaming Using User-Content Hybrid Motion Tracking. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 3, 2, Article 43, 22 pages, June 2019. 
 
@@ -6,7 +8,6 @@ The paper can be found [here](https://github.com/hwsel/LiveMotion/blob/master/pa
 
 Please direct your questions and comments to hwselunl@gmail.com.
 
-# LiveMotion
 
 ## Reporsitory Hierarchy:
 
