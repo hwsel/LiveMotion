@@ -8,7 +8,7 @@ Please direct your questions and comments to hwselunl@gmail.com.
 
 # LiveMotion
 
-## hierarchy of this reporsitory:
+## Reporsitory Hierarchy:
 
 LiveMotion
 
