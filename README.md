@@ -1,4 +1,8 @@
-This is the source code for our paper: "Viewport Prediction for Live 360-Degree Mobile Video Streaming Using User-Content Hybrid Motion Tracking". This paper is going to be published in IWMUT Jun 2019 (Vol. 3, No. 2, Article 43). You can download from our repository following the link(https://github.com/hwsel/LiveMotion/blob/master/paper/Viewport_Prediction_for_Live_360_Degree_Mobile_Video_Streaming_Using_User_Content_Hybrid_Motion_Tracking.pdf).  
+This is github repo for our Ubicomp'19 paper: 
+
+Xianglong Feng, Viswanathan Swaminathan, Sheng Wei, Viewport Prediction for Live 360-Degree Mobile Video Streaming Using User-Content Hybrid Motion Tracking. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 3, 2, Article 43, 22 pages, June 2019. 
+
+The paper can be found [here](https://github.com/hwsel/LiveMotion/blob/master/paper/Viewport_Prediction_for_Live_360_Degree_Mobile_Video_Streaming_Using_User_Content_Hybrid_Motion_Tracking.pdf)  
 
 Please direct your questions and comments to hwselunl@gmail.com.
 
