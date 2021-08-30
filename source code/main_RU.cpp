@@ -636,94 +636,7 @@ int main(int argc, char *argv[])
 			double XminCSV = 1;
 			double prePlayBack = 0;
 			double curPlayBack;
-			/*
-			while (getline(inFile, lineStr))
-			{
-				stringstream ss(lineStr);
-				string Qx;
-				string Qy;
-				string Qz;
-				string Qw;
-				string Fx;
-				string Fy;
-				string Fz;
-				vector<string> lineArray;
-				// 按照逗号分隔
-				getline(ss, Qx, ',');
-				// time data "yyyy-mm-dd hh:mm:ss.ms" save to Qx then to ssb to get second 
-				stringstream ssb(Qx);
-				getline(ssb, Qx, ':');
-				//cout << "1   time stamp   hour   " << Qx << endl;
-				getline(ssb, Qx, ':');
-				//cout << "2  time stamp   minutes   " << Qx << endl;
-				getline(ssb, Qx, ':');
-				//cout << "3   time stamp    second   " << Qx << endl;
-				TimeStempSedCur = stringToDouble(Qx);
-				TimeStempSedCur = floor(TimeStempSedCur);
-				TimeStempSedPre = TimeStempSedCur + 1;		//TimeStempSedCur represent the upper threshold 
-															// play back time data "0.000s"
-				getline(ss, Qx, ',');//delete the first two data which is the playback and time stemp
-				curPlayBack = stringToDouble(Qx);
-				if (curPlayBack < prePlayBack)
-				{
-					//prePlayBack = curPlayBack;
-					break;
-				}
-				else
-				{
-					prePlayBack = curPlayBack;
-				}
-				//cout << "4   play back time    second   " << Qx << endl;
-				double PlayBacks;
-				PlayBacks = stringToDouble(Qx);
-				//cout << "4   play back time    second (in double)  " << PlayBacks << endl;
-				getline(ss, Qx, ',');
-				getline(ss, Qy, ',');
-				getline(ss, Qz, ',');
-				getline(ss, Qw, ',');
-				getline(ss, Fx, ',');
-				getline(ss, Fy, ',');
-				getline(ss, Fz, ',');
-				//cout << "unit quaternion x" << Qx << endl;
-				//cout << "unit quaternion y" << Qy << endl;
-				//cout << "unit quaternion z" << Qz << endl;
-				//cout << "unit quaternion w" << Qw << endl;
-				//cout << "HmdPosition.x" << Fx << endl;
-				//cout << "HmdPosition.y" << Fy << endl;
-				//cout << "HmdPosition.z" << Fz << endl;
-
-				//cout << "The first line of notification" << lineStr << endl;
-				// calculate the position in video
-				//double Fx;
-				//double Fy;
-				double DQ[4], FLocation[2];
-				DQ[0] = stringToDouble(Qx);
-				DQ[1] = stringToDouble(Qy);
-				DQ[2] = stringToDouble(Qz);
-				DQ[3] = stringToDouble(Qw);
-				//cout << "unit quaternion x in number" << DQ[0] << endl;
-				//cout << "unit quaternion y in number" << DQ[1] << endl;
-				//cout << "unit quaternion z in number" << DQ[2] << endl;
-				//cout << "unit quaternion w in number" << DQ[3] << endl;
-
-				cal_forward_ProjectToFrame(DQ, FLocation);
-				//cout << "Position y in frame" << FLocation[0] << endl;
-				//cout << "Position x in frame" << FLocation[1] << endl;
-				double DoubleFx;
-				double DoubleFy;
-				DoubleFx = FLocation[1] / 360;
-				DoubleFy = (90 - FLocation[0]) / 180;
-				//cout << "Position x in frame" << DoubleFx << endl;
-				//cout << "Position y in frame" << DoubleFy << endl;
-				//if (DoubleFx < XminCSV) XminCSV = DoubleFx;
-				//if (DoubleFx > XmaxCSV) XmaxCSV = DoubleFx;
-
-			}
-			cout << "pre" << prePlayBack << endl;
-			cout << "cur" << curPlayBack << endl;
-			//getchar();
-
-			*/
+			
 
 			/*================================================
 			this part we will test the data from the public dataset
@@ -773,7 +686,6 @@ int main(int argc, char *argv[])
 						//cout << "The  line of info" << lineStr << endl;
 						stringstream ssa(lineStr);
 
-						// 按照逗号分隔
 						getline(ssa, Qx, ',');
 						// time data "yyyy-mm-dd hh:mm:ss.ms" save to Qx then to ssb to get second 
 						stringstream ssd(Qx);
@@ -1308,7 +1220,7 @@ int main(int argc, char *argv[])
 					//cout << "The  line of info" << lineStr << endl;
 					stringstream ssa(lineStr);
 
-					// 按照逗号分隔
+					
 					getline(ssa, Qx, ',');
 					// time data "yyyy-mm-dd hh:mm:ss.ms" save to Qx then to ssb to get second 
 					stringstream ssd(Qx);
@@ -1720,9 +1632,9 @@ int main(int argc, char *argv[])
 			Point center = Point(modifiedXNo, location[indexLocationForVideo][1]);
 			// this part test the format of the video
 			//Point centerT = Point(100, 100);
-			//circle(frametT, centerT, r, Scalar(255, 0, 0), -1);//-1为填充
-			//circle(frametT, center, r, Scalar(123, 21, 32), -1);//-1为填充
-			//转换图像至输出允许格式
+			//circle(frametT, centerT, r, Scalar(255, 0, 0), -1);
+			//circle(frametT, center, r, Scalar(123, 21, 32), -1);
+			
 			//frameT = &IplImage(frametT);
 			//cvNamedWindow("Test user video ", CV_WINDOW_NORMAL);
 			cvCircle(frame1, cvPoint(modifiedXNo, location[indexLocationForVideo][1]), r, CV_RGB(255, 0, 0), 1);
