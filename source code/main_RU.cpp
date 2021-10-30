@@ -142,40 +142,7 @@ struct Video_Block
 	int YL;
 };
 
-// coordinate calculation
-// calculate the foward vector based on the unit quaternion
-void cal_forward_ProjectToFrame(double * UQ, double *FV)
-{
-	double qx = UQ[0];
-	double qy = UQ[1];
-	double qz = UQ[2];
-	double qw = UQ[3];
 
-	double x = 2 * qx*qz + 2 * qy*qw;
-	double y = 2 * qy*qz - 2 * qx*qw;
-	double z = 1 - 2 * qx*qx - 2 * qy*qy;
-
-	double a = acos(sqrt(x*x+z*z)/sqrt(x*x+y*y+z*z));
-	if (y > 0)
-	{
-		FV[0] = a / pi * 180;
-	}
-	else
-	{
-		FV[0] = -a / pi * 180;
-	}
-	//cout << "show a=   " << a << endl;
-	double b = acos(x/sqrt(x*x + z*z));
-	if (z < 0)			//original is z<0
-	{
-		FV[1] = b / pi * 180;
-	}
-	else
-	{
-		FV[1] = (2-b / pi) * 180;
-	}
-	//cout << "show b=   " << b << endl;
-}
 
 
 int CalculateDistance(int A_X, int A_Y, int B_X, int B_Y)
@@ -608,7 +575,7 @@ int main(int argc, char *argv[])
 			cout << "unit quaternion z in number" << DQ[2] << endl;
 			cout << "unit quaternion w in number" << DQ[3] << endl;
 
-			cal_forward_ProjectToFrame(DQ, FLocation);
+			cal_forward_ProjectToFrame(DQ, FLocation);//reference [42]
 			cout << "Position y in frame" << FLocation[0] << endl;
 			cout << "Position x in frame" << FLocation[1] << endl;
 			double DoubleFx;
@@ -716,7 +683,7 @@ int main(int argc, char *argv[])
 						DQ[2] = stringToDouble(Qz);
 						DQ[3] = stringToDouble(Qw);
 
-						cal_forward_ProjectToFrame(DQ, FLocation);
+						cal_forward_ProjectToFrame(DQ, FLocation);//reference[42]
 
 						//DoubleFx = FLocation[1] / 360;
 						//DoubleFy = (90 - FLocation[0]) / 180;
@@ -925,7 +892,7 @@ int main(int argc, char *argv[])
 		cout << "unit quaternion z in number" << DQ[2] << endl;
 		cout << "unit quaternion w in number" << DQ[3] << endl;
 
-		cal_forward_ProjectToFrame(DQ, FLocation);
+		cal_forward_ProjectToFrame(DQ, FLocation);//reference[42]
 		cout << "Position y in frame" << FLocation[0] << endl;
 		cout << "Position x in frame" << FLocation[1] << endl;
 		double DoubleFx;
@@ -1016,7 +983,7 @@ int main(int argc, char *argv[])
 		//cout << "unit quaternion z in number" << DQ[2] << endl;
 		//cout << "unit quaternion w in number" << DQ[3] << endl;
 
-		cal_forward_ProjectToFrame(DQ, FLocation);
+		cal_forward_ProjectToFrame(DQ, FLocation);//reference [42]
 		//cout << "Position y in frame" << FLocation[0] << endl;
 		//cout << "Position x in frame" << FLocation[1] << endl;
 		double DoubleFx;
@@ -1251,7 +1218,7 @@ int main(int argc, char *argv[])
 					DQ[2] = stringToDouble(Qz);
 					DQ[3] = stringToDouble(Qw);
 
-					cal_forward_ProjectToFrame(DQ, FLocation);
+					cal_forward_ProjectToFrame(DQ, FLocation);//reference[42]
 
 					//DoubleFx = FLocation[1] / 360;
 					//DoubleFy = (90 - FLocation[0]) / 180;
@@ -1370,7 +1337,7 @@ int main(int argc, char *argv[])
 					DQ[2] = stringToDouble(Qz);
 					DQ[3] = stringToDouble(Qw);
 
-					cal_forward_ProjectToFrame(DQ, FLocation);
+					cal_forward_ProjectToFrame(DQ, FLocation);//reference[42]
 
 					//DoubleFx = FLocation[1] / 360;
 					//DoubleFy = (90 - FLocation[0]) / 180;
